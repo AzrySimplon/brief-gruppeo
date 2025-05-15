@@ -1,0 +1,8 @@
+<p>list-visualization works!</p>
+
+<div>
+  <button>Create new List</button>
+  <button *ngFor="let list of listsArray">
+    {{ list.name }} - {{ list.nbr_persons }} persons
+  </button>
+</div>
