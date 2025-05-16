@@ -1,8 +1,14 @@
-<p>Bonjour,</p>
-<app-header-connection *ngIf="connected"></app-header-connection>
-<app-header-connected *ngIf="!connected"></app-header-connected>
+<header>
+  <app-header-connection *ngIf="!connected" class="center-container"></app-header-connection>
+  <app-header-connected *ngIf="connected" class="center-container"></app-header-connected>
+</header>
+
 
 <div *ngIf="true">
+  <app-presentation-img [img]="'assets/placeholderTrans.png'" [text]="'Trans'" [text_alt]="'trans cringe'"></app-presentation-img>
+  <app-presentation-img [img]="'assets/placeholderTrans.png'" [text]="'Trans'" [text_alt]="'trans cringe'"></app-presentation-img>
+  <app-presentation-img [img]="'assets/placeholderTrans.png'" [text]="'Trans'" [text_alt]="'trans cringe'"></app-presentation-img>
 </div>
 
+<app-footer></app-footer>
 <router-outlet />

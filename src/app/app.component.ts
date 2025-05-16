@@ -1,19 +1,20 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {HeaderConnectedComponent} from './components/header-connected/header-connected.component';
 import {HeaderConnectionComponent} from './components/header-connection/header-connection.component';
 import {NgIf} from '@angular/common';
-import {GlobalVariables} from "../globalVariables"
+import {GlobalVariables} from "../globalVariables";
+import {FooterComponent} from "./components/footer/footer.component";
+import {PresentationImgComponent} from "./components/presentation-img/presentation-img.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderConnectedComponent, HeaderConnectionComponent, NgIf],
+  imports: [RouterOutlet, HeaderConnectedComponent, HeaderConnectionComponent, NgIf, FooterComponent, PresentationImgComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements GlobalVariables{
-  title = 'Gruppeo';
   connected = GlobalVariables.user.isConnected;
 
 }
