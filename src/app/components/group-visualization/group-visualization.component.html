@@ -1,0 +1,7 @@
+<div>
+  <button class="classic-button">Create new Group</button>
+
+  <app-dropdown-selection *ngFor="let group of groupsArrayWithNames" [title_text]="group.name"
+                          [optionTextsArray]="group.memberNames">]
+  </app-dropdown-selection>
+</div>
