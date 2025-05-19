@@ -10,5 +10,9 @@
   <app-presentation-img [img]="'assets/placeholderTrans.png'" [text]="'Trans'" [text_alt]="'trans cringe'"></app-presentation-img>
 </div>
 
+<div *ngIf="connected">
+  <app-search-bar></app-search-bar>
+</div>
+
 <app-footer></app-footer>
 <router-outlet />
