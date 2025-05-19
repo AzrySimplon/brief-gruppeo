@@ -3,16 +3,11 @@
   <app-header-connected *ngIf="connected" class="center-container"></app-header-connected>
 </header>
 
-
-<div *ngIf="true">
-  <app-presentation-img [img]="'assets/placeholderTrans.png'" [text]="'Trans'" [text_alt]="'trans cringe'"></app-presentation-img>
-  <app-presentation-img [img]="'assets/placeholderTrans.png'" [text]="'Trans'" [text_alt]="'trans cringe'"></app-presentation-img>
-  <app-presentation-img [img]="'assets/placeholderTrans.png'" [text]="'Trans'" [text_alt]="'trans cringe'"></app-presentation-img>
-</div>
+<router-outlet></router-outlet>
 
 <div *ngIf="connected">
   <app-search-bar></app-search-bar>
 </div>
 
 <app-footer></app-footer>
-<router-outlet />
+

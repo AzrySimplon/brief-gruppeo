@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import {NgIf} from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header-connection',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './header-connection.component.html',
   styleUrl: './header-connection.component.css'
 })

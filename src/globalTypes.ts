@@ -1,20 +1,21 @@
 import {resolveSrv} from 'node:dns';
+enum Gender {
+  Man,
+  Woman,
+  NonBinary
+}
 
-export {};
+enum Profile {
+  shy,
+  reserved,
+  at_ease
+}
+
+export {Gender, Profile};
 
 declare global {
 
-  enum Gender {
-    Man,
-    Woman,
-    NonBinary
-  }
 
-  enum Profile {
-    shy,
-    reserved,
-    at_ease
-  }
 
   interface List {
     id: number;
@@ -26,6 +27,7 @@ declare global {
     id: number;
     name: string;
     nbr_persons: number;
+    members: Person[];
   }
 
   interface Person {

@@ -1,0 +1,39 @@
+#dropdown-button{
+  background-color: var(--light-blue);
+  border-radius: 0.5em;
+  transition: 0.5s;
+  margin: 0;
+}
+
+#dropdown{
+  margin: 1em 0;
+  border: 2px solid var(--light-grey);
+  border-radius: 0.5em;
+}
+
+#dropdown:hover{
+
+  & #dropdown-button{
+    filter: brightness(0.8);
+  }
+}
+
+#dropdown-content{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+
+  & > *{
+    border:none;
+    background-color: var(--pure-white);
+
+    &:hover{
+      filter: brightness(0.8);
+    }
+  }
+
+}
+
+#dropdown:hover #dropdown-content{
+  display: flex;
+}
