@@ -1,23 +1,26 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-checkbox-choice',
+  standalone: true, // Add this
   imports: [
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   templateUrl: './checkbox-choice.component.html',
   styleUrl: './checkbox-choice.component.css'
 })
 export class CheckboxChoiceComponent {
   @Input() text!: string;
-  public isChecked = false;
+  isChecked: boolean;
 
   constructor() {
+    this.isChecked = false;
   }
 
-  getValue(){
+  getValue() {
     return this.isChecked;
   }
-
 }

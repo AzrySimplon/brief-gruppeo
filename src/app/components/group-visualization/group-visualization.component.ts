@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {NgForOf} from '@angular/common';
 import {GlobalVariables} from '../../../globalVariables';
 import {DropdownSelectionComponent} from '../dropdown-selection/dropdown-selection.component';
+import {RouterLink} from '@angular/router';
 
 interface GroupWithNames extends Group {
   memberNames: string[];
@@ -10,7 +11,7 @@ interface GroupWithNames extends Group {
 @Component({
   selector: 'app-group-visualization',
   imports: [
-    NgForOf, DropdownSelectionComponent
+    NgForOf, DropdownSelectionComponent, RouterLink
   ],
   templateUrl: './group-visualization.component.html',
   styleUrl: './group-visualization.component.css'
