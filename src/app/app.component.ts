@@ -8,14 +8,16 @@ import {FooterComponent} from "./components/footer/footer.component";
 import {PresentationImgComponent} from "./components/presentation-img/presentation-img.component";
 import {CheckboxChoiceComponent} from "./components/checkbox-choice/checkbox-choice.component";
 import {DropdownSelectionComponent} from './components/dropdown-selection/dropdown-selection.component';
+import { SearchBarComponent } from "./components/search-bar/search-bar.component";
+
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderConnectedComponent, HeaderConnectionComponent, NgIf, FooterComponent, PresentationImgComponent, CheckboxChoiceComponent, DropdownSelectionComponent],
+  imports: [RouterOutlet, HeaderConnectedComponent, HeaderConnectionComponent, NgIf, FooterComponent, PresentationImgComponent, CheckboxChoiceComponent, DropdownSelectionComponent, SearchBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements GlobalVariables{
+export class AppComponent implements GlobalVariables {
   connected = GlobalVariables.user.isConnected;
 }
