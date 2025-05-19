@@ -1,0 +1,15 @@
+<h2>Dans: {{list?.name}}</h2>
+
+<div>
+  <p>Nombre de groupes</p>
+
+  <app-checkbox-choice [text]="'Mixer les anciens DWWM'" #checkbox_dwwm></app-checkbox-choice>
+
+  <app-checkbox-choice [text]="'Mixer les ages'" #checkbox_age></app-checkbox-choice>
+
+  <app-checkbox-choice [text]="'Mixer les niveaux techniques'" #checkbox_level></app-checkbox-choice>
+
+  <button class="classic-button" (click)="validate()">Tirer</button>
+
+</div>
+
