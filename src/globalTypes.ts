@@ -1,4 +1,3 @@
-import {resolveSrv} from 'node:dns';
 enum Gender {
   Man,
   Woman,
