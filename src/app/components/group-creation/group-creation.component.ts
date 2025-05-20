@@ -21,6 +21,7 @@ export class GroupCreationComponent implements AfterViewInit {
   @ViewChild('checkbox_age') checkboxAge!: CheckboxChoiceComponent;
   @ViewChild('checkbox_level') checkboxLevel!: CheckboxChoiceComponent;
   @ViewChild('input_person_nbr') textInputPersonNbr!: TextInputComponent;
+  @Input() list!: List;
 
   checkboxComponents: CheckboxChoiceComponent[] = [];
 
@@ -28,7 +29,7 @@ export class GroupCreationComponent implements AfterViewInit {
     this.checkboxComponents = [this.checkboxDWWM, this.checkboxAge, this.checkboxLevel];
   }
 
-  @Input() list!: List;
+
 
   validate() {
     this.checkboxComponents.forEach((checkbox: CheckboxChoiceComponent) => {

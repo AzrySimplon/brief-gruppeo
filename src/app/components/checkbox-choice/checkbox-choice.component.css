@@ -4,6 +4,15 @@ div{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   min-height: 40px;
+  padding: 0 2em;
+}
+
+input[type="checkbox"] {
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  accent-color: var(--dark-blue);
+  margin: 0 10px;
 }
