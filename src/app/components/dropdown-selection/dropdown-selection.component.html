@@ -1,6 +1,14 @@
-<div id="dropdown">
-  <p id="dropdown-button">{{title_text}}</p>
-  <div id="dropdown-content">
-    <button *ngFor="let text of optionTextsArray">{{text}}</button>
+<div class="dropdown responsive" role="listbox">
+  <div class="dropdown-toggle" aria-haspopup="true" [attr.aria-expanded]="isOpen" (click)="toggleDropdown()">
+    <span class="dropdown-title">{{title_text}}</span>
+    <span class="selected-value">{{selectedOption}}</span>
+  </div>
+  <div class="dropdown-content" [ngClass]="{'show-dropdown': isOpen}">
+    <div *ngFor="let text of optionTextsArray; let i = index"
+         class="dropdown-option"
+         [ngClass]="{'selected': text === selectedOption, 'focused': i === focusedOptionIndex}"
+         (click)="selectOption(text, i)">
+      {{text}}
+    </div>
   </div>
 </div>

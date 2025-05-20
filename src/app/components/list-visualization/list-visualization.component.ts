@@ -12,7 +12,4 @@ import {RouterLink} from '@angular/router';
 
 export class ListVisualizationComponent {
   listsArray : List[] = GlobalVariables.temporary.lists;
-
-  constructor() {
-  }
 }
