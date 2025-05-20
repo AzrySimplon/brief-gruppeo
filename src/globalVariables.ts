@@ -8,7 +8,7 @@ function generateRandomPerson() : Person{
       name: `Person${Math.floor(Math.random() * 100)}`,
       gender: Math.random() < 0.33 ? Gender.Man : Math.random() < 0.66 ? Gender.Woman : Gender.NonBinary,
       french_knowledge: Math.floor(Math.random() * 10) + 1,
-      old_dwwn: Math.random() < 0.5,
+      old_dwwm: Math.random() < 0.5,
       technical_knowledge: Math.floor(Math.random() * 10) + 1,
       profile: Math.random() < 0.33 ? Profile.shy : Math.random() < 0.66 ? Profile.reserved : Profile.at_ease,
       age: Math.floor(Math.random() * 40) + 20
@@ -30,7 +30,7 @@ export class GlobalVariables {
   }
 
   public static temporary: {lists: List[], groups: Group[]} = {
-    lists:[{id: 1, name: "liste1", nbr_persons: 5}, {id: 2, name: "liste recherche stage", nbr_persons: 3}],
+    lists:[{id: 1, name: "liste1", nbr_persons: 5, members: [member1, member2]}, {id: 2, name: "liste recherche stage", nbr_persons: 3, members: [member3, member4]}],
     groups: [{id: 1, name: "groupeA", nbr_persons: 2, members: [member1, member2]}, {id: 1, name: "groupe Mathis Christopher", nbr_persons: 1, members: [member3]}]
   }
 }
