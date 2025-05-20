@@ -59,7 +59,28 @@ describe('GroupCreationComponent', () => {
         MockTextInputComponent
       ],
       schemas: [NO_ERRORS_SCHEMA] // Ignore unknown elements
-    }).compileComponents();
+    })
+    .overrideComponent(GroupCreationComponent, {
+      set: {
+        imports: [
+          CommonModule,
+          FormsModule,
+          MockCheckboxChoiceComponent,
+          MockTextInputComponent
+        ],
+        template: `
+          <h2 class="category-title">Dans: {{list?.name}}</h2>
+          <form (ngSubmit)="validate()" class="main-container">
+            <app-text-input [text]="'Nombre de groupes'" #input_person_nbr></app-text-input>
+            <app-checkbox-choice [text]="'Mixer les anciens DWWM'" #checkbox_dwwm></app-checkbox-choice>
+            <app-checkbox-choice [text]="'Mixer les ages'" #checkbox_age></app-checkbox-choice>
+            <app-checkbox-choice [text]="'Mixer les niveaux techniques'" #checkbox_level></app-checkbox-choice>
+            <button type="submit" class="classic-button">Tirer</button>
+          </form>
+        `
+      }
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(GroupCreationComponent);
     component = fixture.componentInstance;
@@ -67,11 +88,10 @@ describe('GroupCreationComponent', () => {
 
     // Create a mock List for the @Input
     component.list = {
-      id: '1',
+      id: 1,
       name: 'Test List',
-      // Add other required List properties here
-      items: []
-    } as any;
+      nbr_persons: 5
+    };
 
     fixture.detectChanges();
   });

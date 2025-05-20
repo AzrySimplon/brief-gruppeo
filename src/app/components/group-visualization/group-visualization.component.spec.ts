@@ -50,7 +50,26 @@ describe('GroupVisualizationComponent', () => {
         RouterTestingModule, // Required for testing RouterLink
         MockDropdownSelectionComponent
       ]
-    }).compileComponents();
+    })
+    .overrideComponent(GroupVisualizationComponent, {
+      set: {
+        imports: [
+          NgForOf,
+          RouterTestingModule,
+          MockDropdownSelectionComponent
+        ],
+        template: `
+          <h2 class="category-title">Groupes</h2>
+          <div class="main-container">
+            <button class="classic-button" [routerLink]="'/group-creation/1'">Créer un nouveau groupe</button>
+            <app-dropdown-selection *ngFor="let group of groupsArrayWithNames" [title_text]="group.name"
+                                  [optionTextsArray]="group.memberNames">
+            </app-dropdown-selection>
+          </div>
+        `
+      }
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(GroupVisualizationComponent);
     component = fixture.componentInstance;

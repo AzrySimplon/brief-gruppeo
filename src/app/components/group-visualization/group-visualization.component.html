@@ -3,6 +3,6 @@
   <button class="classic-button" [routerLink]="'/group-creation/1'">Créer un nouveau groupe</button>
 
   <app-dropdown-selection *ngFor="let group of groupsArrayWithNames" [title_text]="group.name"
-                          [optionTextsArray]="group.memberNames">]
+                          [optionTextsArray]="group.memberNames">
   </app-dropdown-selection>
 </div>

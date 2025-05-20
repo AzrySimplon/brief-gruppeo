@@ -20,6 +20,7 @@ declare global {
     id: number;
     name: string;
     nbr_persons: number;
+    members: Person[];
   }
 
   interface Group {
@@ -34,7 +35,7 @@ declare global {
     name: string;
     gender: Gender;
     french_knowledge: number;
-    old_dwwn: boolean;
+    old_dwwm: boolean;
     technical_knowledge: number;
     profile: Profile;
     age: number;
