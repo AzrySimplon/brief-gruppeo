@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
+import {NgOptimizedImage, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-presentation-img',
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    NgIf
   ],
   templateUrl: './presentation-img.component.html',
   styleUrl: './presentation-img.component.css'
