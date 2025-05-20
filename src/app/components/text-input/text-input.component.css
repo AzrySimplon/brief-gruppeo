@@ -12,3 +12,7 @@ div > input {
 div {
     width: 100%;
 }
+
+div > p {
+    margin: 10px auto;
+}

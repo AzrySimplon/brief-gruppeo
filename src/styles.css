@@ -55,7 +55,7 @@ footer{
 
 .classic-button{
   background-color: var(--light-blue);
-  border-radius: 0.8em;
+  border-radius: 0.5em;
 }
 
 .danger-button{
@@ -100,5 +100,23 @@ footer{
   border-radius: 0.5em;
   & > *{
     width: 90%;
+  }
+}
+
+.scroll-section{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  overflow-y: scroll;
+  height: 50vh;
+  scrollbar-color: var(--light-blue) var(--pure-white);
+  scrollbar-track-color: #383838;
+  scrollbar-width: 5%;
+  padding-right: 5px;
+  gap: 1.5em;
+
+  &> *{
+    padding: 0;
+    margin: 0;
   }
 }
