@@ -103,6 +103,12 @@ footer{
   }
 }
 
+@media (min-width: 800px) {
+  .main-container {
+    width: 50%;
+  }
+}
+
 .scroll-section{
   display: flex;
   flex-direction: column;
