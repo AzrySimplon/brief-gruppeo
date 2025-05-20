@@ -4,7 +4,8 @@ div{
   align-items: center;
   justify-content: center;
   gap: 1em;
-  width: 100%;
+  width: 90%;
+  background-color: var(--light-grey);
   & > *{
     width: 90%;
   }

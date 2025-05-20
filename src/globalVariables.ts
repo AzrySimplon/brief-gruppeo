@@ -26,8 +26,7 @@ const member4: Person = generateRandomPerson();
 
 export class GlobalVariables {
   public static user = {
-    isConnected: false,
-    currentPage: 'discovery'
+    isConnected: false
   }
 
   public static temporary: {lists: List[], groups: Group[]} = {

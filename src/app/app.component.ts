@@ -9,7 +9,7 @@ import { PresentationImgComponent } from "./components/presentation-img/presenta
 import { CheckboxChoiceComponent } from "./components/checkbox-choice/checkbox-choice.component";
 import { DropdownSelectionComponent } from './components/dropdown-selection/dropdown-selection.component';
 import { SearchBarComponent } from "./components/search-bar/search-bar.component";
-import { TextInputComponent } from './text-input/text-input.component';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 @Component({
   selector: 'app-root',

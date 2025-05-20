@@ -1,0 +1,19 @@
+#router-outlet{
+  min-height: 80vh;
+}
+
+#shape1, #shape2{
+  position: absolute;
+  z-index: -1;
+}
+
+#shape1{
+  top:0;
+  right: 0;
+}
+
+#shape2 {
+  bottom: 0;
+  left: -6em;
+
+}
