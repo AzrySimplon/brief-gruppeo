@@ -1,1 +1,13 @@
-<p>list-creation works!</p>
+<h2 class="category-title">Création de liste</h2>
+<form (ngSubmit)="validate()" class="main-container">
+  <app-text-input [text]="'Nom de la liste'" #input_list_name></app-text-input>
+
+  <app-search-bar #input_search></app-search-bar>
+
+  <section>
+    <button *ngFor="let person of personsArray" class="classic-button">{{ person.name }}</button>
+  </section>
+
+  <button class="classic-button">Créer</button>
+</form>
+
