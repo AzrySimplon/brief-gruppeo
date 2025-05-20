@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {NgForOf} from '@angular/common';
 import {GlobalVariables} from '../../../globalVariables';
 import {DropdownSelectionComponent} from '../dropdown-selection/dropdown-selection.component';
@@ -17,7 +17,7 @@ interface GroupWithNames extends Group {
   styleUrl: './group-visualization.component.css'
 })
 export class GroupVisualizationComponent implements OnInit {
-  groupsArray: Group[] = GlobalVariables.temporary.groups;
+  @Input() groupsArray: Group[] = GlobalVariables.temporary.groups;
   groupsArrayWithNames: GroupWithNames[] = [];
 
   ngOnInit() {
@@ -26,6 +26,4 @@ export class GroupVisualizationComponent implements OnInit {
       memberNames: group.members.map(member => member.name)
     }));
   }
-
-
 }
