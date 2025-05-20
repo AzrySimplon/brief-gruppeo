@@ -8,12 +8,11 @@
 }
 
 #shape1{
-  top:0;
+  top:-5em;
   right: 0;
 }
 
 #shape2 {
-  bottom: 0;
+  bottom: 2em;
   left: -6em;
-
 }
