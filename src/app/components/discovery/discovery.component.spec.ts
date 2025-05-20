@@ -44,7 +44,7 @@ describe('DiscoveryComponent', () => {
     fixture.detectChanges();
   });
 
-  // Basic test to ensure component creates successfully
+  // Basic test to ensure the component creates successfully
   it('should create', () => {
     expect(component).toBeTruthy();
   });
